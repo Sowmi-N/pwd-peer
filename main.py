@@ -9,6 +9,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import ElementNotInteractableException
 import time
+import sys
 
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
