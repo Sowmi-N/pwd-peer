@@ -75,6 +75,17 @@ def open_pwd_container():
     print(driver.title)
     print(driver.current_url)
     print("")
-    input("waiting")
+    #input("waiting")
+    while True:
+        time.sleep(60)
+        timestamp = datetime.datetime.utcnow()
+        client["pwd"]["peers"].update_one(
+        {
+            "username": username,
+            "password": password
+        },
+        {
+            "$set": {"stoppedAt": timestamp}
+        })
 
 open_pwd_container()
